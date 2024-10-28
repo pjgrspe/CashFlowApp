@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1035607553673",
+    "project_id": "cashflow-auf",
+    "storage_bucket": "cashflow-auf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035607553673:android:ba82039342e02f02ff7858",
+        "android_client_info": {
+          "package_name": "ph.edu.auf.gorospe.patrickjason.cashflow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJwJDazy3Yz5_OjVJMYHxhzgz1FPFpOJA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
