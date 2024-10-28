@@ -31,19 +31,19 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.launch
 import ph.edu.auf.gorospe.patrickjason.cashflow.data.AccountCard
 import ph.edu.auf.gorospe.patrickjason.cashflow.data.TransactionData
-import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.bottomnav.BottomNavigationBar
-import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.home.HomeScreen
-import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.login.LoginScreen
-import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.register.RegisterScreen
-import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.history.HistoryScreen
-import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.home.sections.accounts.CardDetailScreen
-import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.home.sections.accounts.CardsSection
+import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.components.bottomnav.BottomNavigationBar
+import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.screens.home.HomeScreen
+import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.screens.login.LoginScreen
+import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.screens.register.RegisterScreen
+import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.screens.history.HistoryScreen
+import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.screens.home.sections.accounts.CardDetailScreen
+import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.screens.home.sections.accounts.CardsSection
 import ph.edu.auf.gorospe.patrickjason.cashflow.ui.theme.CashFlowTheme
 import ph.edu.auf.gorospe.patrickjason.cashflow.data.UserRepository
 import ph.edu.auf.gorospe.patrickjason.cashflow.domain.AccountViewModel
-import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.home.sections.accounts.ADD_CARD
-import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.notification.NotificationScreen
-import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.profile.ProfileScreen
+import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.screens.home.sections.accounts.ADD_CARD
+import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.screens.notification.NotificationScreen
+import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.screens.profile.ProfileScreen
 
 class MainActivity : ComponentActivity() {
     private lateinit var userRepository: UserRepository
@@ -123,7 +123,7 @@ fun CashFlowApp(accountViewModel: AccountViewModel) {
             composable("login") { LoginScreen(navController) }
             composable("register") { RegisterScreen(navController) }
             composable("history") { HistoryScreen(navController, transactions) }
-            composable("alerts") { NotificationScreen(navController)}
+            composable("alerts") { NotificationScreen(navController) }
             composable("profile") { ProfileScreen(navController) }
             composable("home") {
                 HomeScreen(
