@@ -81,10 +81,6 @@ class MainActivity : ComponentActivity() {
         accountViewModel = ViewModelProvider(this, userRepository.provideAccountViewModelFactory(userRepository)).get(AccountViewModel::class.java)
     }
 
-    fun onUserLoggedOut() {
-        userRepository.logout()
-        initializeComponents() // Reinitialize components for the new user
-    }
 }
 
 @Composable

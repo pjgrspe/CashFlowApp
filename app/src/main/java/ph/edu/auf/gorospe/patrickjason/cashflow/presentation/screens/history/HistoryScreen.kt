@@ -58,8 +58,9 @@ fun HistoryScreen(
 
     val dateFormatter = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
     val groupedTransactions = transactionsState.value
+        .sortedBy { dateFormatter.parse(it.date) }
         .groupBy { dateFormatter.format(dateFormatter.parse(it.date) ?: it.date) }
-        .toSortedMap(compareByDescending { it })
+        .toSortedMap(compareBy { it })
 
     var searchQuery by remember { mutableStateOf("") }
 
@@ -102,13 +103,6 @@ fun HistoryScreen(
                                 style = MaterialTheme.typography.headlineSmall,
                                 color = Color.White
                             )
-//                            IconButton(onClick = { /* TODO: Filter action */ }) {
-//                                Icon(
-//                                    imageVector = Icons.Default.FilterList,
-//                                    contentDescription = "Filter",
-//                                    tint = Color.White
-//                                )
-//                            }
                         }
                     }
 

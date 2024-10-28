@@ -1,6 +1,7 @@
 package ph.edu.auf.gorospe.patrickjason.cashflow.presentation.screens.home.sections.mainbalance.dialogs
 
 import android.app.DatePickerDialog
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -258,6 +259,7 @@ fun ExpenseDialog(
                     )
 
                     onAddTransaction(newTransaction)
+                    Toast.makeText(context, "Expense Added", Toast.LENGTH_SHORT).show()
                     onDismiss()
                 }
             }) {

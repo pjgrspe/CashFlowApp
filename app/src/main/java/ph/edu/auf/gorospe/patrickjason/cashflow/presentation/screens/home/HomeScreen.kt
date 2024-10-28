@@ -32,7 +32,7 @@ import ph.edu.auf.gorospe.patrickjason.cashflow.presentation.components.loadings
 @Composable
 fun HomeScreen(navController: NavController, userRepository: UserRepository, accountViewModel: AccountViewModel) {
     var userName by remember { mutableStateOf("") }
-    var balance by remember { mutableStateOf(0.00) }
+    var balance by remember { mutableDoubleStateOf(0.00) }
     var accounts by remember { mutableStateOf(listOf<AccountCard>()) }
     var categories by remember { mutableStateOf(listOf<String>()) }
     var transactions by remember { mutableStateOf(listOf<TransactionData>()) } // Add transactions state

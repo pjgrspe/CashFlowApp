@@ -85,7 +85,6 @@ dependencies {
     //navigation
     implementation(libs.androidx.navigation.compose.v253)
     implementation(libs.accompanist.navigation.animation.v02413rc)
-
     implementation(libs.play.services.auth)
 
 }
